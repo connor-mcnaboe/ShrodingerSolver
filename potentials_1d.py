@@ -8,15 +8,7 @@
 #
 #------------------------------------------------------------------------------#
 # Initalizes Potential Energy Matricies                                        #
-# Function Defined:                                                            #
-#   simpsons(psi, a, b) - Numerical integration used to normalize Psi          #
-#       Returns: sum (int) squared normalization coefficient                   #
-#   Laplacian(x) - Creates diagonalized Second derivative matrix               #
-#       Returns: M (ndarray) d^2/dx^2                                          #
-#   solution() - Solves for eigenvalues and eigenvectors                       #
-#       Returns: E, psi(narray,ndarray) normalized Eigenstates & well energies #
-#   probability() - Creates Probablity distribution for each States            #
-#       Returns: prob (ndarray) Matrix, each column represents diff state      #
+#  
 #------------------------------------------------------------------------------#
 
 
@@ -73,12 +65,12 @@ def infWell(N):
 # Square Well Potential #
 #-----------------------#
 def squareWell(N):
-    v0 = -400.00                            # Square Well Depth: defualt = -400 eV
+    v0 = -3000.00                            # Square Well Depth: defualt = -400 eV
     v = np.zeros(N)                         # Potential array
     U = np.zeros([N, N])                    # Potnetial matix
-    xMin = -0.1                             # Left boundry of well: defualt = -0.1nm
-    xMax = 0.1                              # Right Boundry of well: Defualt = 0.1nm
-    xW2 = 0.05                              # 1/2 width of the well: defualt = 0.05nm
+    xMin = -1.0                             # Left boundry of well: defualt = -0.1nm
+    xMax = 1.0                              # Right Boundry of well: Defualt = 0.1nm
+    xW2 = 0.5                               # 1/2 width of the well: defualt = 0.05nm
     x = np.linspace(xMin, xMax, num=N)      # x values
 
 
